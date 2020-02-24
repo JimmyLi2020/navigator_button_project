@@ -34,28 +34,50 @@ class _HomePageState extends State<HomePage> {
       body: Center(
         child: Column(
           children: <Widget>[
-            FlatButton(
-              child: Text('FirstPage'),
-              onPressed: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => FirstPage('First Page'))),
+            Expanded(
+              flex: 1,
+              child: Container(),
             ),
-            FlatButton(
-              child: Text('SecondPage'),
-              onPressed: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => SecondPage('Go Back'))),
+            Expanded(
+              flex: 1,
+              child: FlatButton(
+                color: Colors.blue,
+                child: Text('FirstPage'),
+                onPressed: () =>
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => FirstPage('First Page'))),
+              ),
             ),
-            FlatButton(
-              child: Text('ThirdPage'),
-              onPressed: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => ThirdPage(++widget.count)));
-              },
+            Expanded(
+              flex: 1,
+              child: FlatButton(
+                color: Colors.blue,
+                child: Text('SecondPage'),
+                onPressed: () =>
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => SecondPage('Go Back'))),
+              ),
+            ),
+            Expanded(
+              flex: 1,
+              child: FlatButton(
+                color: Colors.blue,
+                child: Text('ThirdPage'),
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => ThirdPage(++widget.count)));
+                },
+              ),
+            ),
+            Expanded(
+              flex: 1,
+              child: Container(),
             ),
           ],
         ),
